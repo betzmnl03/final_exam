@@ -1,5 +1,5 @@
 class Api::V1::AuctionsController < Api::ApplicationController
-
+    before_action :authenticate_user!, except: [:index, :show]
     before_action :find_auction, only:[:show]
     def create
         auction = Auction.new auction_params

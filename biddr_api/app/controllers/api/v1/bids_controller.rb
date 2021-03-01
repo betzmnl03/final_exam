@@ -1,5 +1,6 @@
 class Api::V1::BidsController < Api::ApplicationController
 
+    before_action :authenticate_user!, only:[:create]
     def create
         # puts params
         @auction = Auction.find params[:auction_id]
