@@ -13,6 +13,12 @@
   }
 }
 
+.welcome{
+  background-image: url("https://www.indexexchange.com/wp-content/uploads/2019/03/header-bidding-auction-ss-1920_uusz3n.gif");
+  width: 100vw;
+  height: 100vh;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
