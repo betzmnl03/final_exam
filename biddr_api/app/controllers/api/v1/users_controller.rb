@@ -1,3 +1,4 @@
+# rails g controller api/v1/users --no-assets --no-helper --skip-template-engine
 class Api::V1::UsersController < Api::ApplicationController
     def create
         user=User.new params.require(:user).permit(

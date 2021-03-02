@@ -4,8 +4,8 @@ class Api::V1::BidsController < Api::ApplicationController
     def create
         # puts params
         @auction = Auction.find params[:auction_id]
-       
         bid = Bid.new params.require(:bid).permit(:price)
+        bid.user = current_user
         bid.auction = @auction
         if bid.save
             render json:bid

@@ -3,6 +3,7 @@ class Api::V1::AuctionsController < Api::ApplicationController
     before_action :find_auction, only:[:show]
     def create
         auction = Auction.new auction_params
+        auction.user = current_user
         if auction.save
             render json:auction
         else
